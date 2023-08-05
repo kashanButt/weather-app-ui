@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  background: #36474f;
+}
+main {
+  height: 350px;
+}
+.app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.left-card {
+  width: 230px;
+  background-image: url(./images/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 25px;
+  position: relative;
+  transition: all 0.3s ease;
+  transform: scale(1.03) perspective(200px);
+  color: white;
+  margin-right: -20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left-card:hover {
+  transform: scale(1.1) perspective(2500px) rotateY(15deg);
+}
+.left-card .bg-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, #5c6bc0 10%, #0d47a1 100%);
+  opacity: 0.5;
+  border-radius: 25px;
+}
+.left-card .dayInfo {
+  position: absolute;
+  top: 15px;
+}
+.left-card .weatherInfo {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.left-card .weatherInfo i {
+  font-size: 60px;
+  margin-left: -6px;
+}
+.left-card .weatherInfo h1 {
+  font-size: 40px;
+}
+.right-card {
+  width: 350px;
+  padding: 20px 20px 20px 40px;
+  background: #222931;
+  color: white;
+  border-radius: 25px;
+}
+.right-card .info > div {
+  width: 90%;
+  margin: auto;
+  padding: 5px 0;
+  display: flex;
+}
+.right-card .info > div:nth-child(1) {
+  padding-top: 0;
+}
+.right-card .info > div .title {
+  width: 72%;
+}
+.right-card .info > div .value {
+  width: 28%;
+  text-align: right;
+}
+.right-card .cards {
+  width: 100%;
+  height: 140px;
+  margin: 20px auto;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+.right-card .cards > .weather {
+  width: calc(100% * (1 / 4));
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+  transition: all 0.2s ease;
+  transform: skew(1.01) perspective(200px);
+  cursor: pointer;
+}
+.right-card .cards > .weather:hover {
+  background-color: white;
+  color: black;
+  transform: skew(1.1) perspective(2500px);
+}
+.right-card .cards > .weather i {
+  font-size: 40px;
+}
+.right-card button {
+  width: 100%;
+  color: white;
+  background-color: #303f9f;
+  padding: 5px 0;
+  outline: none;
+  border-radius: 25px;
+  border: 0;
+  font-weight: 900;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.right-card button:hover {
+  background-color: #1a237e;
+}
